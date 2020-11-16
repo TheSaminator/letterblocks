@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "letterblocks",
+	"version": "${version}",
+	"name": "Letter Blocks!",
+	"description": "Adds letter blocks",
+	"authors": [
+		"The Saminator"
+	],
+	"license": "CC0-1.0",
+	"icon": "assets/letterblocks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.thesaminator.letterblocks.LetterBlocksModKt::init"
+		],
+		"client": [
+			"net.thesaminator.letterblocks.LetterBlocksModKt::initClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.7.1",
+		"fabric": "*",
+		"fabric-language-kotlin": "*",
+		"minecraft": "1.16.x"
+	}
+}
