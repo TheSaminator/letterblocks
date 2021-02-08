@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=east": { "model": "letterblocks:block/black_klingon_i", "y": 90 },
+		"facing=south": { "model": "letterblocks:block/black_klingon_i", "y": 180 },
+		"facing=west": { "model": "letterblocks:block/black_klingon_i", "y": 270 },
+		"facing=north": { "model": "letterblocks:block/black_klingon_i" }
+	}
+}

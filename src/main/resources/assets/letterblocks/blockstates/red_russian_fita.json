@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=east": { "model": "letterblocks:block/red_russian_fita", "y": 90 },
+		"facing=south": { "model": "letterblocks:block/red_russian_fita", "y": 180 },
+		"facing=west": { "model": "letterblocks:block/red_russian_fita", "y": 270 },
+		"facing=north": { "model": "letterblocks:block/red_russian_fita" }
+	}
+}

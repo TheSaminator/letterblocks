@@ -2,15 +2,25 @@ package net.thesaminator.letterblocks
 
 import net.minecraft.util.Identifier
 
-data class LetterBlockAddress(val letter: Letter, val isWhite: Boolean) {
+data class LetterBlockAddress(val letter: Letter, val color: LetterColor) {
 	val identifier: Identifier
-		get() = Identifier(MOD_ID, "${if (isWhite) "white" else "black"}_${letter.name.toLowerCase()}")
+		get() = Identifier(MOD_ID, "${color.name.toLowerCase()}_${letter.name.toLowerCase()}")
 	
 	companion object {
-		fun values() = Letter.values().map {
-			LetterBlockAddress(it, false)
-		} + Letter.values().map {
-			LetterBlockAddress(it, true)
+		fun values() = LetterColor.values().flatMap { color ->
+			Letter.values().map { letter ->
+				LetterBlockAddress(letter, color)
+			}
+		}
+		
+		fun withAlphabet(alphabet: Alphabet): List<LetterBlockAddress> {
+			val letters = Letter.values().filter { it.alphabet == alphabet }
+			
+			return LetterColor.values().flatMap { color ->
+				letters.map { letter ->
+					LetterBlockAddress(letter, color)
+				}
+			}
 		}
 	}
 }

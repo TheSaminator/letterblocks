@@ -1,6 +1,0 @@
-{
-	"parent": "letterblocks:block/letter_block",
-	"textures": {
-		"texture": "letterblocks:block/black_p"
-	}
-}

@@ -1,0 +1,6 @@
+{
+	"parent": "letterblocks:block/letter_block",
+	"textures": {
+		"texture": "letterblocks:block/red_russian_m"
+	}
+}
